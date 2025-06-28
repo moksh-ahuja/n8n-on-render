@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "admin"         # 👈 Replace this if you want
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "securepassword123"  # 👈 Change this to your private password
+      - key: N8N_HOST
+        value: "0.0.0.0"
+      - key: N8N_PORT
+        value: "5678"
+      - key: N8N_PROTOCOL
+        value: "http"
+      - key: WEBHOOK_TUNNEL_URL
+        value: "https://n8n.onrender.com"  # 👈 Will auto-update
+      - key: GENERIC_TIMEZONE
+        value: "Asia/Kolkata"
