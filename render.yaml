@@ -8,9 +8,9 @@ services:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
       - key: N8N_BASIC_AUTH_USER
-        value: "admin"         # 👈 Replace this if you want
+        value: "${ADMIN_USER}"   # 🔐 placeholder
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: "securepassword123"  # 👈 Change this to your private password
+        value: "${ADMIN_PASS}"   # 🔐 placeholder
       - key: N8N_HOST
         value: "0.0.0.0"
       - key: N8N_PORT
@@ -18,6 +18,6 @@ services:
       - key: N8N_PROTOCOL
         value: "http"
       - key: WEBHOOK_TUNNEL_URL
-        value: "https://n8n.onrender.com"  # 👈 Will auto-update
+        value: "https://n8n.onrender.com"
       - key: GENERIC_TIMEZONE
         value: "Asia/Kolkata"
